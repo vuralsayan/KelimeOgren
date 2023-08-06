@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.TxtKullanıcıAd = new System.Windows.Forms.TextBox();
+            this.BtnGiris = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -50,11 +51,22 @@
             this.TxtKullanıcıAd.Size = new System.Drawing.Size(172, 34);
             this.TxtKullanıcıAd.TabIndex = 1;
             // 
+            // BtnGiris
+            // 
+            this.BtnGiris.Location = new System.Drawing.Point(292, 177);
+            this.BtnGiris.Name = "BtnGiris";
+            this.BtnGiris.Size = new System.Drawing.Size(148, 38);
+            this.BtnGiris.TabIndex = 2;
+            this.BtnGiris.Text = "Giriş Yap";
+            this.BtnGiris.UseVisualStyleBackColor = true;
+            this.BtnGiris.Click += new System.EventHandler(this.BtnGiris_Click);
+            // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 280);
+            this.Controls.Add(this.BtnGiris);
             this.Controls.Add(this.TxtKullanıcıAd);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Georgia", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -74,5 +86,6 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox TxtKullanıcıAd;
+        private System.Windows.Forms.Button BtnGiris;
     }
 }

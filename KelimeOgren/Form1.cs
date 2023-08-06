@@ -13,9 +13,12 @@ namespace KelimeOgren
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        private string sonKullanici;
+
+        public Form1(string sonKullanici)
         {
             InitializeComponent();
+            this.sonKullanici = sonKullanici;
         }
 
         // Access veritabanı bağlantısı 
@@ -48,6 +51,7 @@ namespace KelimeOgren
         {
             Getir();
             TxtTurkce.Focus();
+            LblKullanıcıAd.Text = sonKullanici.ToString();
         }
 
 
@@ -70,7 +74,7 @@ namespace KelimeOgren
             {
                 TxtTurkce.Enabled = false;
                 Txtİngilizce.Enabled = false;
-                MessageBox.Show("Süre Bitti","Bilgi",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                MessageBox.Show("Süre Bitti", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
     }
