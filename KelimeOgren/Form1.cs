@@ -24,17 +24,17 @@ namespace KelimeOgren
         // Access veritabanı bağlantısı 
         OleDbConnection baglanti = new OleDbConnection(@"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\vural\source\dbSozluk.accdb");
         Random rnd = new Random();
-        int sure = 90;      //Süre
+        int sure = 10;      //Süre
         int kelime = 0;
 
         private void Getir()
         {
             int sayi = 0;
-            sayi = rnd.Next(1, 2490);
+            sayi = rnd.Next(2502, 2551);
             LblCevap.Text = sayi.ToString();
 
             baglanti.Open();
-            OleDbCommand komut = new OleDbCommand("Select * from sozluk where id=@p1", baglanti);
+            OleDbCommand komut = new OleDbCommand("Select * from sozluk2 where id=@p1", baglanti);
             komut.Parameters.AddWithValue("@p1", sayi);
             OleDbDataReader dr = komut.ExecuteReader();
             while (dr.Read())
@@ -75,6 +75,8 @@ namespace KelimeOgren
                 TxtTurkce.Enabled = false;
                 Txtİngilizce.Enabled = false;
                 MessageBox.Show("Süre Bitti", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                timer1.Stop();
+                BtnBilmiyorum.Enabled = false;  
             }
         }
 
@@ -93,9 +95,9 @@ namespace KelimeOgren
                           "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void BtnBilmiyorum_Click(object sender, EventArgs e)
         {
-            Getir(); 
+            Getir();
         }
     }
     }

@@ -38,7 +38,7 @@
             this.LblKullanıcıAd = new System.Windows.Forms.Label();
             this.BtnKaydet = new System.Windows.Forms.Button();
             this.Txtİngilizce = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.BtnBilmiyorum = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // TxtTurkce
@@ -141,19 +141,19 @@
             this.Txtİngilizce.Size = new System.Drawing.Size(684, 31);
             this.Txtİngilizce.TabIndex = 10;
             // 
-            // button1
+            // BtnBilmiyorum
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(1)))), ((int)(((byte)(200)))));
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(477, 242);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(162, 44);
-            this.button1.TabIndex = 14;
-            this.button1.Text = "Bilmiyorum";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.BtnBilmiyorum.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(1)))), ((int)(((byte)(200)))));
+            this.BtnBilmiyorum.FlatAppearance.BorderSize = 0;
+            this.BtnBilmiyorum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnBilmiyorum.ForeColor = System.Drawing.Color.White;
+            this.BtnBilmiyorum.Location = new System.Drawing.Point(477, 242);
+            this.BtnBilmiyorum.Name = "BtnBilmiyorum";
+            this.BtnBilmiyorum.Size = new System.Drawing.Size(162, 44);
+            this.BtnBilmiyorum.TabIndex = 14;
+            this.BtnBilmiyorum.Text = "Bilmiyorum";
+            this.BtnBilmiyorum.UseVisualStyleBackColor = false;
+            this.BtnBilmiyorum.Click += new System.EventHandler(this.BtnBilmiyorum_Click);
             // 
             // Form1
             // 
@@ -162,7 +162,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(109)))), ((int)(((byte)(182)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(689, 312);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.BtnBilmiyorum);
             this.Controls.Add(this.TxtTurkce);
             this.Controls.Add(this.Txtİngilizce);
             this.Controls.Add(this.BtnKaydet);
@@ -194,7 +194,7 @@
         private System.Windows.Forms.Label LblKullanıcıAd;
         private System.Windows.Forms.Button BtnKaydet;
         private System.Windows.Forms.TextBox Txtİngilizce;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button BtnBilmiyorum;
     }
 }
 
