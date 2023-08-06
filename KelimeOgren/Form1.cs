@@ -51,7 +51,7 @@ namespace KelimeOgren
         {
             Getir();
             TxtTurkce.Focus();
-            LblKullanıcıAd.Text = sonKullanici.ToString();
+            LblKullanıcıAd.Text = $"Hoşgeldin {sonKullanici.ToUpper()}";
         }
 
 
@@ -87,9 +87,15 @@ namespace KelimeOgren
             komut.Parameters.AddWithValue("@p2", LblKelime.Text);
             komut.ExecuteNonQuery();
             baglanti.Close();
+            timer1.Stop();
             string puan = LblKelime.Text;
             MessageBox.Show($"Kullanıcı Adı: {sonKullanici}\nPuanınız: {puan}",
                           "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Getir(); 
         }
     }
     }
