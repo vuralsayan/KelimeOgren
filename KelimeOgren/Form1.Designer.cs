@@ -34,7 +34,7 @@
             this.TxtTurkce = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.LblSüre = new System.Windows.Forms.Label();
+            this.LblSure = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.LblKelime = new System.Windows.Forms.Label();
             this.LblCevap = new System.Windows.Forms.Label();
@@ -55,14 +55,15 @@
             this.Txtİngilizce.Location = new System.Drawing.Point(171, 51);
             this.Txtİngilizce.Name = "Txtİngilizce";
             this.Txtİngilizce.Size = new System.Drawing.Size(246, 30);
-            this.Txtİngilizce.TabIndex = 1;
+            this.Txtİngilizce.TabIndex = 10;
             // 
             // TxtTurkce
             // 
             this.TxtTurkce.Location = new System.Drawing.Point(171, 87);
             this.TxtTurkce.Name = "TxtTurkce";
             this.TxtTurkce.Size = new System.Drawing.Size(246, 30);
-            this.TxtTurkce.TabIndex = 3;
+            this.TxtTurkce.TabIndex = 1;
+            this.TxtTurkce.TextChanged += new System.EventHandler(this.TxtTurkce_TextChanged);
             // 
             // label2
             // 
@@ -82,14 +83,14 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "Süre:";
             // 
-            // LblSüre
+            // LblSure
             // 
-            this.LblSüre.AutoSize = true;
-            this.LblSüre.Location = new System.Drawing.Point(599, 64);
-            this.LblSüre.Name = "LblSüre";
-            this.LblSüre.Size = new System.Drawing.Size(33, 24);
-            this.LblSüre.TabIndex = 5;
-            this.LblSüre.Text = "90";
+            this.LblSure.AutoSize = true;
+            this.LblSure.Location = new System.Drawing.Point(599, 64);
+            this.LblSure.Name = "LblSure";
+            this.LblSure.Size = new System.Drawing.Size(33, 24);
+            this.LblSure.TabIndex = 5;
+            this.LblSure.Text = "90";
             // 
             // label5
             // 
@@ -114,32 +115,38 @@
             this.LblCevap.AutoSize = true;
             this.LblCevap.Location = new System.Drawing.Point(418, 191);
             this.LblCevap.Name = "LblCevap";
-            this.LblCevap.Size = new System.Drawing.Size(80, 24);
+            this.LblCevap.Size = new System.Drawing.Size(60, 24);
             this.LblCevap.TabIndex = 8;
-            this.LblCevap.Text = "Kelime:";
-            this.LblCevap.Visible = false;
+            this.LblCevap.Text = "cevap";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1055, 529);
+            this.ClientSize = new System.Drawing.Size(863, 374);
             this.Controls.Add(this.LblCevap);
             this.Controls.Add(this.LblKelime);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.LblSüre);
+            this.Controls.Add(this.LblSure);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.TxtTurkce);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.Txtİngilizce);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Kelime Oyunu";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -152,7 +159,7 @@
         private System.Windows.Forms.TextBox TxtTurkce;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label LblSüre;
+        private System.Windows.Forms.Label LblSure;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label LblKelime;
         private System.Windows.Forms.Label LblCevap;
