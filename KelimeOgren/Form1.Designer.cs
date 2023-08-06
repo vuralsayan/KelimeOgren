@@ -40,6 +40,7 @@
             this.LblCevap = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.LblKullanıcıAd = new System.Windows.Forms.Label();
+            this.BtnKaydet = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -135,11 +136,22 @@
             this.LblKullanıcıAd.TabIndex = 11;
             this.LblKullanıcıAd.Text = "label4";
             // 
+            // BtnKaydet
+            // 
+            this.BtnKaydet.Location = new System.Drawing.Point(151, 269);
+            this.BtnKaydet.Name = "BtnKaydet";
+            this.BtnKaydet.Size = new System.Drawing.Size(118, 37);
+            this.BtnKaydet.TabIndex = 12;
+            this.BtnKaydet.Text = "Kaydet";
+            this.BtnKaydet.UseVisualStyleBackColor = true;
+            this.BtnKaydet.Click += new System.EventHandler(this.BtnKaydet_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(863, 374);
+            this.Controls.Add(this.BtnKaydet);
             this.Controls.Add(this.LblKullanıcıAd);
             this.Controls.Add(this.LblCevap);
             this.Controls.Add(this.LblKelime);
@@ -176,6 +188,7 @@
         private System.Windows.Forms.Label LblCevap;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label LblKullanıcıAd;
+        private System.Windows.Forms.Button BtnKaydet;
     }
 }
 

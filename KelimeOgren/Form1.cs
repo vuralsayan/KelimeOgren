@@ -77,5 +77,20 @@ namespace KelimeOgren
                 MessageBox.Show("Süre Bitti", "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void BtnKaydet_Click(object sender, EventArgs e)
+        {
+            // Kullanıcı adını ve puanını database kaydetme
+            baglanti.Open();
+            OleDbCommand komut = new OleDbCommand("insert into Kullanıcı (Ad,Puan) values (@p1,@p2)", baglanti);
+            komut.Parameters.AddWithValue("@p1", LblKullanıcıAd.Text);
+            komut.Parameters.AddWithValue("@p2", LblKelime.Text);
+            komut.ExecuteNonQuery();
+            baglanti.Close();
+            string puan = LblKelime.Text;
+            MessageBox.Show($"Kullanıcı Adı: {sonKullanici}\nPuanınız: {puan}",
+                          "Bilgi", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
     }
-}
+    }
+
