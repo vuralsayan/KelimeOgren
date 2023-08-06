@@ -36,7 +36,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(117, 125);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(64, 71);
             this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(153, 27);
@@ -45,7 +46,7 @@
             // 
             // TxtKullanıcıAd
             // 
-            this.TxtKullanıcıAd.Location = new System.Drawing.Point(280, 118);
+            this.TxtKullanıcıAd.Location = new System.Drawing.Point(227, 64);
             this.TxtKullanıcıAd.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.TxtKullanıcıAd.Name = "TxtKullanıcıAd";
             this.TxtKullanıcıAd.Size = new System.Drawing.Size(172, 34);
@@ -53,19 +54,24 @@
             // 
             // BtnGiris
             // 
-            this.BtnGiris.Location = new System.Drawing.Point(292, 177);
+            this.BtnGiris.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(109)))), ((int)(((byte)(182)))));
+            this.BtnGiris.FlatAppearance.BorderSize = 0;
+            this.BtnGiris.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnGiris.ForeColor = System.Drawing.Color.Transparent;
+            this.BtnGiris.Location = new System.Drawing.Point(227, 122);
             this.BtnGiris.Name = "BtnGiris";
-            this.BtnGiris.Size = new System.Drawing.Size(148, 38);
+            this.BtnGiris.Size = new System.Drawing.Size(172, 38);
             this.BtnGiris.TabIndex = 2;
             this.BtnGiris.Text = "Giriş Yap";
-            this.BtnGiris.UseVisualStyleBackColor = true;
+            this.BtnGiris.UseVisualStyleBackColor = false;
             this.BtnGiris.Click += new System.EventHandler(this.BtnGiris_Click);
             // 
             // Giris
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(14F, 27F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(714, 280);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(1)))), ((int)(((byte)(200)))));
+            this.ClientSize = new System.Drawing.Size(556, 225);
             this.Controls.Add(this.BtnGiris);
             this.Controls.Add(this.TxtKullanıcıAd);
             this.Controls.Add(this.label1);
